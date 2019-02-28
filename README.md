@@ -1,6 +1,6 @@
 # Hexe
 
-`Hexe` is a minimal hexdumping tool. No fancy features.
+`Hexe` is a hexdumping tool with 0% fat.
 
 ## Compilation
 
