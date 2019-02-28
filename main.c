@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
         ifile = fopen(argv[1], "r");
         if (ifile == NULL)
         {
-            fprintf(stderr, "Cannot open file %s for reading.", argv[1]);
+            fprintf(stderr, "Cannot open %s for reading.\n", argv[1]);
             return 1;
         }
     }
@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
         ofile = fopen(argv[2], "w");
         if (ofile == NULL)
         {
-            fprintf(stderr, "Cannot open file %s for writing.", argv[2]);
+            fprintf(stderr, "Cannot open %s for writing.\n", argv[2]);
             return 2;
         }
     }
@@ -32,6 +32,7 @@ int main(int argc, char *argv[])
     while ((nread = fread(bytes, 1, sizeof(bytes), ifile)))
     {
         fprintf(ofile, "%08x\t", offset);
+
         for (int i = 0; i < nread; i++)
         {
             fprintf(ofile, "%02x", bytes[i]);
