@@ -36,8 +36,8 @@ int main(int argc, char *argv[])
         {
             fprintf(ofile, "%02x", bytes[i]);
             fputc(i != sizeof(bytes) - 1 ? ' ' : '\n', ofile);
-            offset += nread;
         }
+        offset += nread;
     }
 
     fclose(ifile);
