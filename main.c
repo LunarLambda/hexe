@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
     while ((nread = fread(bytes, 1, sizeof(bytes), ifile)))
     {
         fprintf(ofile, "%08x\t", offset);
-        for (int i = 0; i < sizeof(bytes); i++)
+        for (int i = 0; i < nread; i++)
         {
             fprintf(ofile, "%02x", bytes[i]);
             fputc(i != sizeof(bytes) - 1 ? ' ' : '\n', ofile);
