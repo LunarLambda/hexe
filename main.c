@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 
         for (int i = 0; i < nread; i++)
         {
-            fprintf(ofile, "%02x", bytes[i]);
+            fprintf(ofile, "%02hhx", bytes[i]);
             fputc(i != nread - 1 ? ' ' : '\n', ofile);
         }
         offset += nread;
