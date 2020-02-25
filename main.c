@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
         }
     }
 
-    char bytes[16];
+    unsigned char bytes[16];
     int nread;
     unsigned offset = 0;
 
